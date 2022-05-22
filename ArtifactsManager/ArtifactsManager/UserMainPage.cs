@@ -21,5 +21,15 @@ namespace ArtifactsManager
         {
 
         }
+
+        private void elementsLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void flowLayoutPanel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

@@ -13,9 +13,23 @@ namespace ArtifactsManager
 {
     public partial class AddNewForm : Form
     {
-        public AddNewForm()
+        private string type;
+        private int categoryId;
+        private UserMainPage parentForm;
+        public AddNewForm(UserMainPage parent, string type)
         {
             InitializeComponent();
+            this.parentForm = parent;
+            this.type = type;
+        }
+
+        public AddNewForm(UserMainPage parent, string type, int categoryId)
+        {
+            InitializeComponent();
+            this.type = type;
+            this.parentForm = parent;
+            this.categoryId = categoryId;
+
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -95,32 +109,62 @@ namespace ArtifactsManager
 
         private void saveButton_Click(object sender, EventArgs e)
         {
-            string query = "CREATE TABLE " + this.nameTextBox.Text + " (\n";
-            string values = "(";
-
-            int i = flowLayoutPanel.Controls.Count;
-            foreach (Panel panel in flowLayoutPanel.Controls)
-            {
-                i--;
-                //attribute name
-                query += panel.Controls[6].Text;
-                query += " ";
-                //value type
-                query += panel.Controls[1].Text;
-                if(i!=0) query += ",";
-                query += "\n";
-                //value
-                values = values + panel.Controls[0].Text;
-                if (i != 0) values += ", ";
-            }
-            query += ");\n";
-            values += ");\n";
-            query += "INSERT INTO " + this.nameTextBox.Text + "\n" +
-                "VALUES " + values;
-
-            Console.WriteLine(query);
             ArtifactsManagerContext context = new ArtifactsManagerContext();
-            context.Database.ExecuteSqlCommand(query);
+
+            //add to categories table
+            if (type == "category")
+            {
+                 Category category = new Category();
+                 category.Name = this.nameTextBox.Text;
+                context.Categories.Add(category);
+                context.SaveChanges();
+                parentForm.addCategoryToList(category);
+
+                foreach (Panel panel in flowLayoutPanel.Controls)
+                {
+                    string attributeName = panel.Controls[6].Text;
+                    string valueType = panel.Controls[1].Text;
+                    string value = panel.Controls[0].Text;
+
+                    Attribute attribute = new Attribute();
+                    attribute.Name = attributeName;
+                    attribute.Type = valueType;
+                    attribute.Value = value;
+                    attribute.ParentType = type;
+                    attribute.ParentId = category.Id;
+                    context.Attributes.Add(attribute);
+                }
+            }
+            //add to elements table
+            else if (type == "element")
+            {
+                Element element = new Element();
+                element.Name = this.nameTextBox.Text;
+                element.CategoryId = categoryId;
+                context.Add(element);
+                context.SaveChanges();
+                parentForm.addElementToList(element);
+
+                foreach (Panel panel in flowLayoutPanel.Controls)
+                {
+                    string attributeName = panel.Controls[6].Text;
+                    string valueType = panel.Controls[1].Text;
+                    string value = panel.Controls[0].Text;
+
+                    Attribute attribute = new Attribute();
+                    attribute.Name = attributeName;
+                    attribute.Type = valueType;
+                    attribute.Value = value;
+                    attribute.ParentType = type;
+                    attribute.ParentId = element.Id;
+                    context.Attributes.Add(attribute);
+                }
+
+            }
+            context.SaveChanges();
+            this.Close();
         }
+
+
     }
 }

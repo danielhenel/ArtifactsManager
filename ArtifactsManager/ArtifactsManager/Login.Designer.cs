@@ -31,13 +31,13 @@
             this.loginButton = new System.Windows.Forms.Button();
             this.cancelButton = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.Title = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.passwordLabel = new System.Windows.Forms.Label();
+            this.loginLabel = new System.Windows.Forms.Label();
             this.loginTextBox = new System.Windows.Forms.TextBox();
             this.passwordTextBox = new System.Windows.Forms.TextBox();
-            this.Title = new System.Windows.Forms.Label();
-            this.loginLabel = new System.Windows.Forms.Label();
-            this.passwordLabel = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -71,6 +71,17 @@
             this.panel1.Size = new System.Drawing.Size(474, 100);
             this.panel1.TabIndex = 2;
             // 
+            // Title
+            // 
+            this.Title.AutoSize = true;
+            this.Title.BackColor = System.Drawing.SystemColors.Control;
+            this.Title.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Title.Location = new System.Drawing.Point(149, 19);
+            this.Title.Name = "Title";
+            this.Title.Size = new System.Drawing.Size(198, 25);
+            this.Title.TabIndex = 0;
+            this.Title.Text = "Artifacts Manager";
+            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.passwordLabel);
@@ -82,14 +93,23 @@
             this.panel2.Size = new System.Drawing.Size(474, 100);
             this.panel2.TabIndex = 3;
             // 
-            // panel3
+            // passwordLabel
             // 
-            this.panel3.Controls.Add(this.loginButton);
-            this.panel3.Controls.Add(this.cancelButton);
-            this.panel3.Location = new System.Drawing.Point(12, 224);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(474, 100);
-            this.panel3.TabIndex = 4;
+            this.passwordLabel.AutoSize = true;
+            this.passwordLabel.Location = new System.Drawing.Point(67, 58);
+            this.passwordLabel.Name = "passwordLabel";
+            this.passwordLabel.Size = new System.Drawing.Size(52, 13);
+            this.passwordLabel.TabIndex = 3;
+            this.passwordLabel.Text = "password";
+            // 
+            // loginLabel
+            // 
+            this.loginLabel.AutoSize = true;
+            this.loginLabel.Location = new System.Drawing.Point(67, 25);
+            this.loginLabel.Name = "loginLabel";
+            this.loginLabel.Size = new System.Drawing.Size(29, 13);
+            this.loginLabel.TabIndex = 2;
+            this.loginLabel.Text = "login";
             // 
             // loginTextBox
             // 
@@ -106,33 +126,15 @@
             this.passwordTextBox.Size = new System.Drawing.Size(245, 20);
             this.passwordTextBox.TabIndex = 1;
             // 
-            // Title
+            // panel3
             // 
-            this.Title.AutoSize = true;
-            this.Title.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Title.Location = new System.Drawing.Point(149, 19);
-            this.Title.Name = "Title";
-            this.Title.Size = new System.Drawing.Size(198, 25);
-            this.Title.TabIndex = 0;
-            this.Title.Text = "Artifacts Manager";
-            // 
-            // loginLabel
-            // 
-            this.loginLabel.AutoSize = true;
-            this.loginLabel.Location = new System.Drawing.Point(67, 25);
-            this.loginLabel.Name = "loginLabel";
-            this.loginLabel.Size = new System.Drawing.Size(29, 13);
-            this.loginLabel.TabIndex = 2;
-            this.loginLabel.Text = "login";
-            // 
-            // passwordLabel
-            // 
-            this.passwordLabel.AutoSize = true;
-            this.passwordLabel.Location = new System.Drawing.Point(67, 58);
-            this.passwordLabel.Name = "passwordLabel";
-            this.passwordLabel.Size = new System.Drawing.Size(52, 13);
-            this.passwordLabel.TabIndex = 3;
-            this.passwordLabel.Text = "password";
+            this.panel3.Controls.Add(this.loginButton);
+            this.panel3.Controls.Add(this.cancelButton);
+            this.panel3.Location = new System.Drawing.Point(12, 224);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(474, 100);
+            this.panel3.TabIndex = 4;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // Login
             // 

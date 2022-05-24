@@ -21,6 +21,7 @@ namespace ArtifactsManager
                         select user;
 
             foundUser = query.FirstOrDefault();
+            
 
 
             if (foundUser != null) return context.verifyPassword(foundUser.password, password);
@@ -29,14 +30,21 @@ namespace ArtifactsManager
 
         private void showErrorMessage()
         {
-            //TODO:
+            string msg = "Incorrect password or login";
+            Label label = new Label();
+            label.Width = 300;
+            label.ForeColor = System.Drawing.Color.Red;
+            label.Text = msg;
+            panel3.Controls.Add(label);
+
         }
 
         private void loginButton_Click(object sender, EventArgs e)
         {
             if (loginAndPasswordCorrect(loginTextBox.Text, passwordTextBox.Text))
             {
-                if(foundUser.role == "admin")
+                Controller.loggedUser = foundUser;
+                if (foundUser.role == "admin")
                 {
                     AdminMainPage adminMainPage = new AdminMainPage();
                     adminMainPage.Show();
@@ -53,6 +61,11 @@ namespace ArtifactsManager
         private void cancelButton_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

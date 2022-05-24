@@ -162,6 +162,8 @@
       <DependentUpon>AreYouSureForm.cs</DependentUpon>
     </Compile>
     <Compile Include="ArtifactsManagerContext.cs" />
+    <Compile Include="Attribute.cs" />
+    <Compile Include="Category.cs" />
     <Compile Include="Controller.cs" />
     <Compile Include="EditForm.cs">
       <SubType>Form</SubType>
@@ -169,6 +171,7 @@
     <Compile Include="EditForm.Designer.cs">
       <DependentUpon>EditForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Element.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>

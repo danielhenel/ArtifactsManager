@@ -18,6 +18,9 @@ namespace ArtifactsManager
         }
 
         public DbSet<User> Users { get; set; }
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<Element> Elements { get; set; }
+
 
         public void createAdminIfNotExist()
         {

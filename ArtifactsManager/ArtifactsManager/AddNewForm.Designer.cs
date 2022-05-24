@@ -33,19 +33,23 @@ namespace ArtifactsManager
             this.panel1 = new System.Windows.Forms.Panel();
             this.saveButton = new System.Windows.Forms.Button();
             this.cancelButton = new System.Windows.Forms.Button();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.valueTextBox = new System.Windows.Forms.TextBox();
+            this.valueTypeComboBox = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.removeButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.attributeNameTextBox = new System.Windows.Forms.TextBox();
             this.addButton = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.valueTypeComboBox = new System.Windows.Forms.ComboBox();
-            this.valueTextBox = new System.Windows.Forms.TextBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.nameLabel = new System.Windows.Forms.Label();
+            this.nameTextBox = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
-            this.flowLayoutPanel1.SuspendLayout();
+            this.flowLayoutPanel.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -65,6 +69,7 @@ namespace ArtifactsManager
             this.saveButton.TabIndex = 2;
             this.saveButton.Text = "Save";
             this.saveButton.UseVisualStyleBackColor = true;
+            this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
             // cancelButton
             // 
@@ -75,13 +80,15 @@ namespace ArtifactsManager
             this.cancelButton.Text = "Cancel";
             this.cancelButton.UseVisualStyleBackColor = true;
             // 
-            // flowLayoutPanel1
+            // flowLayoutPanel
             // 
-            this.flowLayoutPanel1.Controls.Add(this.panel2);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 12);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(680, 596);
-            this.flowLayoutPanel1.TabIndex = 1;
+            this.flowLayoutPanel.AutoScroll = true;
+            this.flowLayoutPanel.Controls.Add(this.panel2);
+            this.flowLayoutPanel.Location = new System.Drawing.Point(12, 53);
+            this.flowLayoutPanel.Name = "flowLayoutPanel";
+            this.flowLayoutPanel.Size = new System.Drawing.Size(680, 555);
+            this.flowLayoutPanel.TabIndex = 1;
+            this.flowLayoutPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
             // panel2
             // 
@@ -97,6 +104,46 @@ namespace ArtifactsManager
             this.panel2.Size = new System.Drawing.Size(677, 126);
             this.panel2.TabIndex = 0;
             // 
+            // valueTextBox
+            // 
+            this.valueTextBox.Location = new System.Drawing.Point(309, 71);
+            this.valueTextBox.Name = "valueTextBox";
+            this.valueTextBox.Size = new System.Drawing.Size(323, 20);
+            this.valueTextBox.TabIndex = 6;
+            // 
+            // valueTypeComboBox
+            // 
+            this.valueTypeComboBox.FormattingEnabled = true;
+            this.valueTypeComboBox.Items.AddRange(new object[] {
+            "boolean",
+            "float",
+            "double",
+            "integer",
+            "varchar(255)"});
+            this.valueTypeComboBox.Location = new System.Drawing.Point(309, 43);
+            this.valueTypeComboBox.Name = "valueTypeComboBox";
+            this.valueTypeComboBox.Size = new System.Drawing.Size(323, 21);
+            this.valueTypeComboBox.TabIndex = 5;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(27, 74);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(34, 13);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Value";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(27, 51);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(61, 13);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Value Type";
+            // 
             // removeButton
             // 
             this.removeButton.Location = new System.Drawing.Point(638, 13);
@@ -104,6 +151,7 @@ namespace ArtifactsManager
             this.removeButton.Size = new System.Drawing.Size(21, 23);
             this.removeButton.TabIndex = 2;
             this.removeButton.UseVisualStyleBackColor = true;
+            this.removeButton.Click += new System.EventHandler(this.removeButton_Click);
             // 
             // label1
             // 
@@ -129,55 +177,50 @@ namespace ArtifactsManager
             this.addButton.TabIndex = 2;
             this.addButton.Text = "Add";
             this.addButton.UseVisualStyleBackColor = true;
+            this.addButton.Click += new System.EventHandler(this.addButton_Click);
             // 
-            // label2
+            // panel3
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(27, 51);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 13);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Value Type";
+            this.panel3.Controls.Add(this.nameLabel);
+            this.panel3.Controls.Add(this.nameTextBox);
+            this.panel3.Location = new System.Drawing.Point(15, 13);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(677, 37);
+            this.panel3.TabIndex = 3;
             // 
-            // label3
+            // nameLabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(27, 74);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(34, 13);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Value";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.nameLabel.AutoSize = true;
+            this.nameLabel.Location = new System.Drawing.Point(30, 9);
+            this.nameLabel.Name = "nameLabel";
+            this.nameLabel.Size = new System.Drawing.Size(38, 13);
+            this.nameLabel.TabIndex = 1;
+            this.nameLabel.Text = "NAME";
             // 
-            // valueTypeComboBox
+            // nameTextBox
             // 
-            this.valueTypeComboBox.FormattingEnabled = true;
-            this.valueTypeComboBox.Location = new System.Drawing.Point(309, 43);
-            this.valueTypeComboBox.Name = "valueTypeComboBox";
-            this.valueTypeComboBox.Size = new System.Drawing.Size(323, 21);
-            this.valueTypeComboBox.TabIndex = 5;
-            // 
-            // valueTextBox
-            // 
-            this.valueTextBox.Location = new System.Drawing.Point(309, 71);
-            this.valueTextBox.Name = "valueTextBox";
-            this.valueTextBox.Size = new System.Drawing.Size(323, 20);
-            this.valueTextBox.TabIndex = 6;
+            this.nameTextBox.Location = new System.Drawing.Point(309, 3);
+            this.nameTextBox.Name = "nameTextBox";
+            this.nameTextBox.Size = new System.Drawing.Size(323, 20);
+            this.nameTextBox.TabIndex = 0;
             // 
             // AddNewForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(704, 741);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.addButton);
-            this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.flowLayoutPanel);
             this.Controls.Add(this.panel1);
             this.Name = "AddNewForm";
             this.Text = "AddNewForm";
             this.panel1.ResumeLayout(false);
-            this.flowLayoutPanel1.ResumeLayout(false);
+            this.flowLayoutPanel.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -185,7 +228,7 @@ namespace ArtifactsManager
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox attributeNameTextBox;
@@ -197,5 +240,8 @@ namespace ArtifactsManager
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button addButton;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label nameLabel;
+        private System.Windows.Forms.TextBox nameTextBox;
     }
 }

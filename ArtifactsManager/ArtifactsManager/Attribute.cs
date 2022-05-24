@@ -6,11 +6,13 @@ using System.Threading.Tasks;
 
 namespace ArtifactsManager
 {
-    public class Category
+    public class Attribute
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public IList<Element> Elements { get; } = new List<Element>();
-    
+        public string Type { get; set; }
+        public string Value { get; set; }
+        public string ParentType { get; set; }
+        public int? ParentId { get; set; }
     }
 }

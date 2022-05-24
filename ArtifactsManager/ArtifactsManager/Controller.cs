@@ -8,7 +8,7 @@ namespace ArtifactsManager
 {
     internal class Controller
     {
-        private User loggedUser { get; set; }
+        public static User loggedUser { get; set; }
         private string currentTable { get; set; } 
     }
 }

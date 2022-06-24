@@ -92,5 +92,10 @@ namespace ArtifactsManager
                     context.hashPassword(usersDataGridView.Rows[e.RowIndex].Cells[1].Value.ToString());
             }
         }
+
+        private void LogOutButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

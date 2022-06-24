@@ -30,12 +30,9 @@
         {
             this.proceedButton = new System.Windows.Forms.Button();
             this.cancelButton = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.messageLabel = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.areYouSureLabel = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -60,28 +57,10 @@
             this.cancelButton.UseVisualStyleBackColor = true;
             this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.messageLabel);
-            this.panel1.Location = new System.Drawing.Point(12, 12);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(475, 100);
-            this.panel1.TabIndex = 5;
-            // 
-            // messageLabel
-            // 
-            this.messageLabel.AutoSize = true;
-            this.messageLabel.Location = new System.Drawing.Point(178, 28);
-            this.messageLabel.Name = "messageLabel";
-            this.messageLabel.Size = new System.Drawing.Size(117, 13);
-            this.messageLabel.TabIndex = 0;
-            this.messageLabel.Text = "some warning message";
-            this.messageLabel.Click += new System.EventHandler(this.messageLabel_Click);
-            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.areYouSureLabel);
-            this.panel2.Location = new System.Drawing.Point(12, 118);
+            this.panel2.Location = new System.Drawing.Point(12, 12);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(475, 46);
             this.panel2.TabIndex = 6;
@@ -101,7 +80,7 @@
             // 
             this.panel3.Controls.Add(this.cancelButton);
             this.panel3.Controls.Add(this.proceedButton);
-            this.panel3.Location = new System.Drawing.Point(12, 171);
+            this.panel3.Location = new System.Drawing.Point(12, 73);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(475, 59);
             this.panel3.TabIndex = 7;
@@ -110,14 +89,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(499, 242);
+            this.ClientSize = new System.Drawing.Size(499, 152);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
             this.Name = "AreYouSureForm";
             this.Text = "AreYouSureForm";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -129,8 +105,6 @@
 
         private System.Windows.Forms.Button proceedButton;
         private System.Windows.Forms.Button cancelButton;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label messageLabel;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label areYouSureLabel;
         private System.Windows.Forms.Panel panel3;

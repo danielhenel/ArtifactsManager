@@ -13,6 +13,6 @@ namespace ArtifactsManager
         public string Type { get; set; }
         public string Value { get; set; }
         public string ParentType { get; set; }
-        public int? ParentId { get; set; }
+        public int ParentId { get; set; }
     }
 }

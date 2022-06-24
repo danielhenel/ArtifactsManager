@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,7 +17,9 @@ namespace ArtifactsManager
     {
         private Button currentCategory = null;
         private Button currentElement = null;
-        
+        private BindingSource bindingSource1 = new BindingSource();
+        private SqlDataAdapter dataAdapter = new SqlDataAdapter();
+
         public UserMainPage()
         {
             InitializeComponent();
@@ -142,13 +146,14 @@ namespace ArtifactsManager
             loadElements();
 
 
-            var elements = (
-                 from s in context.Elements
-                 where s.CategoryId == currentCategory.TabIndex
+            var attributes = (
+                 from s in context.Attributes
+                 where s.ParentId == currentCategory.TabIndex
+                 && s.ParentType == "category"
                  select s
-                 ).ToList<Element>();
+                 ).ToList<Attribute>();
 
-            dataGridView.DataSource = elements;
+            dataGridView.DataSource = attributes;
         }
 
 
@@ -162,13 +167,13 @@ namespace ArtifactsManager
             string tablename = currentElement.Name;
 
             var attributes = (
-                from s in context.Attributes
-                where s.ParentType == "element" && s.ParentId == currentElement.TabIndex
-                select s
-                ).ToList<Attribute>();
+                 from s in context.Attributes
+                 where s.ParentId == currentElement.TabIndex
+                 && s.ParentType == "element"
+                 select s
+                 ).ToList<Attribute>();
 
             dataGridView.DataSource = attributes;
-
         }
 
         private void deleteElementButton_Click(object sender, EventArgs e)
@@ -252,6 +257,32 @@ namespace ArtifactsManager
                 context.Categories.Remove(category);
             }
             context.SaveChanges();
+        }
+
+        private void LogOutButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void editCategoryButtton_Click(object sender, EventArgs e)
+        {
+            if(currentCategory != null)
+            {
+                int categoryId = currentCategory.TabIndex;
+                EditForm form = new EditForm(categoryId,"category");
+                form.Show();
+            }
+
+        }
+
+        private void EditElementButton_Click(object sender, EventArgs e)
+        {
+            if (currentElement != null)
+            {
+                int elementId = currentElement.TabIndex;
+                EditForm form = new EditForm(elementId, "element");
+                form.Show();
+            }
         }
     }
 }

@@ -31,8 +31,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.deleteElementButton = new System.Windows.Forms.Button();
             this.deleteCategoryButton = new System.Windows.Forms.Button();
-            this.findCategoryButtton = new System.Windows.Forms.Button();
-            this.FindElementButton = new System.Windows.Forms.Button();
+            this.editCategoryButtton = new System.Windows.Forms.Button();
+            this.EditElementButton = new System.Windows.Forms.Button();
             this.LogOutButton = new System.Windows.Forms.Button();
             this.AddNewElementButton = new System.Windows.Forms.Button();
             this.addNewCategoryButton = new System.Windows.Forms.Button();
@@ -40,6 +40,7 @@
             this.dataGridView = new System.Windows.Forms.DataGridView();
             this.categoriesFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.elementsFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.categoriesLabel = new System.Windows.Forms.Label();
@@ -48,6 +49,7 @@
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
+            this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             this.SuspendLayout();
@@ -56,8 +58,8 @@
             // 
             this.panel1.Controls.Add(this.deleteElementButton);
             this.panel1.Controls.Add(this.deleteCategoryButton);
-            this.panel1.Controls.Add(this.findCategoryButtton);
-            this.panel1.Controls.Add(this.FindElementButton);
+            this.panel1.Controls.Add(this.editCategoryButtton);
+            this.panel1.Controls.Add(this.EditElementButton);
             this.panel1.Controls.Add(this.LogOutButton);
             this.panel1.Controls.Add(this.AddNewElementButton);
             this.panel1.Controls.Add(this.addNewCategoryButton);
@@ -86,23 +88,25 @@
             this.deleteCategoryButton.UseVisualStyleBackColor = true;
             this.deleteCategoryButton.Click += new System.EventHandler(this.deleteCategoryButton_Click);
             // 
-            // findCategoryButtton
+            // editCategoryButtton
             // 
-            this.findCategoryButtton.Location = new System.Drawing.Point(30, 97);
-            this.findCategoryButtton.Name = "findCategoryButtton";
-            this.findCategoryButtton.Size = new System.Drawing.Size(129, 61);
-            this.findCategoryButtton.TabIndex = 4;
-            this.findCategoryButtton.Text = "Find Category";
-            this.findCategoryButtton.UseVisualStyleBackColor = true;
+            this.editCategoryButtton.Location = new System.Drawing.Point(30, 97);
+            this.editCategoryButtton.Name = "editCategoryButtton";
+            this.editCategoryButtton.Size = new System.Drawing.Size(129, 61);
+            this.editCategoryButtton.TabIndex = 4;
+            this.editCategoryButtton.Text = "Edit Category";
+            this.editCategoryButtton.UseVisualStyleBackColor = true;
+            this.editCategoryButtton.Click += new System.EventHandler(this.editCategoryButtton_Click);
             // 
-            // FindElementButton
+            // EditElementButton
             // 
-            this.FindElementButton.Location = new System.Drawing.Point(202, 97);
-            this.FindElementButton.Name = "FindElementButton";
-            this.FindElementButton.Size = new System.Drawing.Size(129, 61);
-            this.FindElementButton.TabIndex = 3;
-            this.FindElementButton.Text = "Find Element";
-            this.FindElementButton.UseVisualStyleBackColor = true;
+            this.EditElementButton.Location = new System.Drawing.Point(202, 97);
+            this.EditElementButton.Name = "EditElementButton";
+            this.EditElementButton.Size = new System.Drawing.Size(129, 61);
+            this.EditElementButton.TabIndex = 3;
+            this.EditElementButton.Text = "Edit Element";
+            this.EditElementButton.UseVisualStyleBackColor = true;
+            this.EditElementButton.Click += new System.EventHandler(this.EditElementButton_Click);
             // 
             // LogOutButton
             // 
@@ -112,6 +116,7 @@
             this.LogOutButton.TabIndex = 2;
             this.LogOutButton.Text = "Log out";
             this.LogOutButton.UseVisualStyleBackColor = true;
+            this.LogOutButton.Click += new System.EventHandler(this.LogOutButton_Click);
             // 
             // AddNewElementButton
             // 
@@ -138,7 +143,7 @@
             this.panel2.Controls.Add(this.dataGridView);
             this.panel2.Location = new System.Drawing.Point(383, 94);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1025, 704);
+            this.panel2.Size = new System.Drawing.Size(742, 704);
             this.panel2.TabIndex = 1;
             // 
             // dataGridView
@@ -146,7 +151,7 @@
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView.Location = new System.Drawing.Point(14, 17);
             this.dataGridView.Name = "dataGridView";
-            this.dataGridView.Size = new System.Drawing.Size(993, 676);
+            this.dataGridView.Size = new System.Drawing.Size(731, 607);
             this.dataGridView.TabIndex = 0;
             // 
             // categoriesFlowLayoutPanel
@@ -160,10 +165,22 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.label1);
             this.panel3.Location = new System.Drawing.Point(383, 1);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1025, 87);
+            this.panel3.Size = new System.Drawing.Size(742, 87);
             this.panel3.TabIndex = 3;
+            // 
+            // label1
+            // 
+            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(731, 87);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Details";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
             // elementsFlowLayoutPanel
             // 
@@ -215,7 +232,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1420, 799);
+            this.ClientSize = new System.Drawing.Size(1137, 799);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.elementsFlowLayoutPanel);
@@ -228,6 +245,7 @@
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
+            this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);
@@ -248,12 +266,13 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button deleteElementButton;
         private System.Windows.Forms.Button deleteCategoryButton;
-        private System.Windows.Forms.Button findCategoryButtton;
-        private System.Windows.Forms.Button FindElementButton;
+        private System.Windows.Forms.Button editCategoryButtton;
+        private System.Windows.Forms.Button EditElementButton;
         private System.Windows.Forms.FlowLayoutPanel elementsFlowLayoutPanel;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label categoriesLabel;
         private System.Windows.Forms.Label elementsLabel;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -39,22 +39,24 @@
             // 
             // proceedButton
             // 
+            this.proceedButton.BackColor = System.Drawing.Color.Gold;
             this.proceedButton.Location = new System.Drawing.Point(343, 7);
             this.proceedButton.Name = "proceedButton";
             this.proceedButton.Size = new System.Drawing.Size(129, 49);
             this.proceedButton.TabIndex = 3;
             this.proceedButton.Text = "Proceed";
-            this.proceedButton.UseVisualStyleBackColor = true;
+            this.proceedButton.UseVisualStyleBackColor = false;
             this.proceedButton.Click += new System.EventHandler(this.proceedButton_Click);
             // 
             // cancelButton
             // 
+            this.cancelButton.BackColor = System.Drawing.Color.Gold;
             this.cancelButton.Location = new System.Drawing.Point(208, 7);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(129, 49);
             this.cancelButton.TabIndex = 4;
             this.cancelButton.Text = "Cancel";
-            this.cancelButton.UseVisualStyleBackColor = true;
+            this.cancelButton.UseVisualStyleBackColor = false;
             this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
             // 
             // panel2
@@ -89,6 +91,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LemonChiffon;
             this.ClientSize = new System.Drawing.Size(499, 152);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);

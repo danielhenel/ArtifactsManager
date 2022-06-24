@@ -37,6 +37,7 @@ namespace ArtifactsManager
                 attributePanel.Name = "attributePanel";
                 attributePanel.Size = new System.Drawing.Size(677, 61);
                 attributePanel.TabIndex = 0;
+                attributePanel.BackColor = System.Drawing.Color.OliveDrab;
                 // 
                 // attributeLabel
                 // 

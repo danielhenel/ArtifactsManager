@@ -46,22 +46,24 @@
             // 
             // saveButton
             // 
+            this.saveButton.BackColor = System.Drawing.Color.Gold;
             this.saveButton.Location = new System.Drawing.Point(524, 15);
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(129, 49);
             this.saveButton.TabIndex = 2;
             this.saveButton.Text = "Save";
-            this.saveButton.UseVisualStyleBackColor = true;
+            this.saveButton.UseVisualStyleBackColor = false;
             this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
             // cancelButton
             // 
+            this.cancelButton.BackColor = System.Drawing.Color.Gold;
             this.cancelButton.Location = new System.Drawing.Point(375, 15);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(129, 49);
             this.cancelButton.TabIndex = 1;
             this.cancelButton.Text = "Cancel";
-            this.cancelButton.UseVisualStyleBackColor = true;
+            this.cancelButton.UseVisualStyleBackColor = false;
             this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
             // 
             // flowLayoutPanel1
@@ -75,6 +77,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Khaki;
             this.ClientSize = new System.Drawing.Size(704, 741);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel1);

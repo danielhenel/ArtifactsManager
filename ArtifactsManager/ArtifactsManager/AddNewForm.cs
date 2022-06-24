@@ -81,6 +81,9 @@ namespace ArtifactsManager
             button_1.Location = new System.Drawing.Point(638, 13);
             button_1.Size = new System.Drawing.Size(21, 23);
             button_1.UseVisualStyleBackColor = true;
+            button_1.Text = "X";
+            button_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            button_1.BackColor = System.Drawing.Color.OrangeRed;
             button_1.Click += new System.EventHandler(this.removeButton_Click);
 
             panel.Controls.Add(button_1);
@@ -99,6 +102,7 @@ namespace ArtifactsManager
 
 
             panel.Size = new System.Drawing.Size(677, 126);
+            panel.BackColor = System.Drawing.Color.Khaki;
             flowLayoutPanel.Controls.Add(panel);
         }
 

@@ -45,22 +45,24 @@
             // 
             // loginButton
             // 
+            this.loginButton.BackColor = System.Drawing.Color.Gold;
             this.loginButton.Location = new System.Drawing.Point(353, 46);
             this.loginButton.Name = "loginButton";
             this.loginButton.Size = new System.Drawing.Size(118, 51);
             this.loginButton.TabIndex = 0;
             this.loginButton.Text = "login";
-            this.loginButton.UseVisualStyleBackColor = true;
+            this.loginButton.UseVisualStyleBackColor = false;
             this.loginButton.Click += new System.EventHandler(this.loginButton_Click);
             // 
             // cancelButton
             // 
+            this.cancelButton.BackColor = System.Drawing.Color.Gold;
             this.cancelButton.Location = new System.Drawing.Point(229, 46);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(118, 51);
             this.cancelButton.TabIndex = 1;
             this.cancelButton.Text = "cancel";
-            this.cancelButton.UseVisualStyleBackColor = true;
+            this.cancelButton.UseVisualStyleBackColor = false;
             this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
             // 
             // panel1
@@ -74,7 +76,7 @@
             // Title
             // 
             this.Title.AutoSize = true;
-            this.Title.BackColor = System.Drawing.SystemColors.Control;
+            this.Title.BackColor = System.Drawing.Color.OliveDrab;
             this.Title.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Title.Location = new System.Drawing.Point(149, 19);
             this.Title.Name = "Title";
@@ -113,6 +115,7 @@
             // 
             // loginTextBox
             // 
+            this.loginTextBox.BackColor = System.Drawing.Color.Khaki;
             this.loginTextBox.Location = new System.Drawing.Point(183, 25);
             this.loginTextBox.Name = "loginTextBox";
             this.loginTextBox.Size = new System.Drawing.Size(245, 20);
@@ -120,6 +123,7 @@
             // 
             // passwordTextBox
             // 
+            this.passwordTextBox.BackColor = System.Drawing.Color.Khaki;
             this.passwordTextBox.Location = new System.Drawing.Point(183, 51);
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.PasswordChar = '*';
@@ -140,6 +144,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.OliveDrab;
             this.ClientSize = new System.Drawing.Size(498, 335);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);

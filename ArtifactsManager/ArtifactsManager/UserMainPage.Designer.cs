@@ -56,6 +56,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.Khaki;
             this.panel1.Controls.Add(this.deleteElementButton);
             this.panel1.Controls.Add(this.deleteCategoryButton);
             this.panel1.Controls.Add(this.editCategoryButtton);
@@ -70,72 +71,79 @@
             // 
             // deleteElementButton
             // 
+            this.deleteElementButton.BackColor = System.Drawing.Color.DarkGoldenrod;
             this.deleteElementButton.Location = new System.Drawing.Point(202, 178);
             this.deleteElementButton.Name = "deleteElementButton";
             this.deleteElementButton.Size = new System.Drawing.Size(129, 61);
             this.deleteElementButton.TabIndex = 6;
             this.deleteElementButton.Text = "Delete Element";
-            this.deleteElementButton.UseVisualStyleBackColor = true;
+            this.deleteElementButton.UseVisualStyleBackColor = false;
             this.deleteElementButton.Click += new System.EventHandler(this.deleteElementButton_Click);
             // 
             // deleteCategoryButton
             // 
+            this.deleteCategoryButton.BackColor = System.Drawing.Color.DarkGoldenrod;
             this.deleteCategoryButton.Location = new System.Drawing.Point(30, 178);
             this.deleteCategoryButton.Name = "deleteCategoryButton";
             this.deleteCategoryButton.Size = new System.Drawing.Size(129, 61);
             this.deleteCategoryButton.TabIndex = 5;
             this.deleteCategoryButton.Text = "Delete Category";
-            this.deleteCategoryButton.UseVisualStyleBackColor = true;
+            this.deleteCategoryButton.UseVisualStyleBackColor = false;
             this.deleteCategoryButton.Click += new System.EventHandler(this.deleteCategoryButton_Click);
             // 
             // editCategoryButtton
             // 
+            this.editCategoryButtton.BackColor = System.Drawing.Color.Goldenrod;
             this.editCategoryButtton.Location = new System.Drawing.Point(30, 97);
             this.editCategoryButtton.Name = "editCategoryButtton";
             this.editCategoryButtton.Size = new System.Drawing.Size(129, 61);
             this.editCategoryButtton.TabIndex = 4;
             this.editCategoryButtton.Text = "Edit Category";
-            this.editCategoryButtton.UseVisualStyleBackColor = true;
+            this.editCategoryButtton.UseVisualStyleBackColor = false;
             this.editCategoryButtton.Click += new System.EventHandler(this.editCategoryButtton_Click);
             // 
             // EditElementButton
             // 
+            this.EditElementButton.BackColor = System.Drawing.Color.Goldenrod;
             this.EditElementButton.Location = new System.Drawing.Point(202, 97);
             this.EditElementButton.Name = "EditElementButton";
             this.EditElementButton.Size = new System.Drawing.Size(129, 61);
             this.EditElementButton.TabIndex = 3;
             this.EditElementButton.Text = "Edit Element";
-            this.EditElementButton.UseVisualStyleBackColor = true;
+            this.EditElementButton.UseVisualStyleBackColor = false;
             this.EditElementButton.Click += new System.EventHandler(this.EditElementButton_Click);
             // 
             // LogOutButton
             // 
+            this.LogOutButton.BackColor = System.Drawing.Color.OliveDrab;
             this.LogOutButton.Location = new System.Drawing.Point(30, 258);
             this.LogOutButton.Name = "LogOutButton";
             this.LogOutButton.Size = new System.Drawing.Size(301, 23);
             this.LogOutButton.TabIndex = 2;
             this.LogOutButton.Text = "Log out";
-            this.LogOutButton.UseVisualStyleBackColor = true;
+            this.LogOutButton.UseVisualStyleBackColor = false;
             this.LogOutButton.Click += new System.EventHandler(this.LogOutButton_Click);
             // 
             // AddNewElementButton
             // 
+            this.AddNewElementButton.BackColor = System.Drawing.Color.Gold;
             this.AddNewElementButton.Location = new System.Drawing.Point(202, 18);
             this.AddNewElementButton.Name = "AddNewElementButton";
             this.AddNewElementButton.Size = new System.Drawing.Size(129, 61);
             this.AddNewElementButton.TabIndex = 1;
             this.AddNewElementButton.Text = "Add New Element";
-            this.AddNewElementButton.UseVisualStyleBackColor = true;
+            this.AddNewElementButton.UseVisualStyleBackColor = false;
             this.AddNewElementButton.Click += new System.EventHandler(this.AddNewElementButton_Click);
             // 
             // addNewCategoryButton
             // 
+            this.addNewCategoryButton.BackColor = System.Drawing.Color.Gold;
             this.addNewCategoryButton.Location = new System.Drawing.Point(30, 18);
             this.addNewCategoryButton.Name = "addNewCategoryButton";
             this.addNewCategoryButton.Size = new System.Drawing.Size(129, 61);
             this.addNewCategoryButton.TabIndex = 0;
             this.addNewCategoryButton.Text = "Add New Category";
-            this.addNewCategoryButton.UseVisualStyleBackColor = true;
+            this.addNewCategoryButton.UseVisualStyleBackColor = false;
             this.addNewCategoryButton.Click += new System.EventHandler(this.addNewCategoryButton_Click);
             // 
             // panel2
@@ -148,6 +156,7 @@
             // 
             // dataGridView
             // 
+            this.dataGridView.BackgroundColor = System.Drawing.Color.Khaki;
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView.Location = new System.Drawing.Point(14, 17);
             this.dataGridView.Name = "dataGridView";
@@ -173,14 +182,15 @@
             // 
             // label1
             // 
+            this.label1.BackColor = System.Drawing.Color.OliveDrab;
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(731, 87);
+            this.label1.Size = new System.Drawing.Size(742, 87);
             this.label1.TabIndex = 0;
             this.label1.Text = "Details";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // elementsFlowLayoutPanel
             // 
@@ -193,6 +203,7 @@
             // 
             // panel4
             // 
+            this.panel4.BackColor = System.Drawing.Color.OliveDrab;
             this.panel4.Controls.Add(this.categoriesLabel);
             this.panel4.Location = new System.Drawing.Point(2, 1);
             this.panel4.Name = "panel4";
@@ -211,6 +222,7 @@
             // 
             // panel5
             // 
+            this.panel5.BackColor = System.Drawing.Color.OliveDrab;
             this.panel5.Controls.Add(this.elementsLabel);
             this.panel5.Location = new System.Drawing.Point(190, 1);
             this.panel5.Name = "panel5";
@@ -232,6 +244,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Khaki;
             this.ClientSize = new System.Drawing.Size(1137, 799);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);

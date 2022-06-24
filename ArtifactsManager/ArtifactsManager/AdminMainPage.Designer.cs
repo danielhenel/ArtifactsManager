@@ -37,6 +37,7 @@
             // 
             // usersDataGridView
             // 
+            this.usersDataGridView.BackgroundColor = System.Drawing.Color.Khaki;
             this.usersDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.usersDataGridView.Location = new System.Drawing.Point(12, 53);
             this.usersDataGridView.Name = "usersDataGridView";
@@ -46,13 +47,14 @@
             // 
             // submitButton
             // 
+            this.submitButton.BackColor = System.Drawing.Color.DarkGoldenrod;
             this.submitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.submitButton.Location = new System.Drawing.Point(658, 459);
             this.submitButton.Name = "submitButton";
             this.submitButton.Size = new System.Drawing.Size(244, 48);
             this.submitButton.TabIndex = 3;
             this.submitButton.Text = "Submit Changes";
-            this.submitButton.UseVisualStyleBackColor = true;
+            this.submitButton.UseVisualStyleBackColor = false;
             this.submitButton.Click += new System.EventHandler(this.submitButton_Click);
             // 
             // label1
@@ -67,18 +69,21 @@
             // 
             // LogOutButton
             // 
+            this.LogOutButton.BackColor = System.Drawing.Color.DarkGoldenrod;
+            this.LogOutButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LogOutButton.Location = new System.Drawing.Point(12, 484);
             this.LogOutButton.Name = "LogOutButton";
             this.LogOutButton.Size = new System.Drawing.Size(301, 23);
             this.LogOutButton.TabIndex = 5;
             this.LogOutButton.Text = "Log out";
-            this.LogOutButton.UseVisualStyleBackColor = true;
+            this.LogOutButton.UseVisualStyleBackColor = false;
             this.LogOutButton.Click += new System.EventHandler(this.LogOutButton_Click);
             // 
             // AdminMainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Khaki;
             this.ClientSize = new System.Drawing.Size(914, 534);
             this.Controls.Add(this.LogOutButton);
             this.Controls.Add(this.label1);

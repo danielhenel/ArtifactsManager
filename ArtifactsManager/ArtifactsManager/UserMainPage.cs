@@ -140,14 +140,15 @@ namespace ArtifactsManager
             currentCategory.BackColor = System.Drawing.Color.Red;
             elementsFlowLayoutPanel.Controls.Clear();
             loadElements();
-            /*
-            string tablename = "dbo."+currentCategory.Name;
-            //context
-            var table = (List<Category>)context.GetType()
-                           .GetProperty(tablename)
-                           .GetValue(context, null);
 
-            string query = "SELECT * FROM " + tablename + ";";*/
+
+            var elements = (
+                 from s in context.Elements
+                 where s.CategoryId == currentCategory.TabIndex
+                 select s
+                 ).ToList<Element>();
+
+            dataGridView.DataSource = elements;
         }
 
 
@@ -159,12 +160,15 @@ namespace ArtifactsManager
             currentElement = (Button)sender;
             currentElement.BackColor = System.Drawing.Color.Red;
             string tablename = currentElement.Name;
-            //context
-            /*var table = (List<Element>)context.GetType()
-                           .GetProperty(tablename)
-                           .GetValue(context, null);*/
 
-           // dataGridView.DataSource = table;
+            var attributes = (
+                from s in context.Attributes
+                where s.ParentType == "element" && s.ParentId == currentElement.TabIndex
+                select s
+                ).ToList<Attribute>();
+
+            dataGridView.DataSource = attributes;
+
         }
 
         private void deleteElementButton_Click(object sender, EventArgs e)

@@ -172,6 +172,7 @@
       <DependentUpon>EditForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Element.cs" />
+    <Compile Include="Getter.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -189,6 +190,9 @@
     </Compile>
     <EmbeddedResource Include="AddNewForm.resx">
       <DependentUpon>AddNewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminMainPage.resx">
+      <DependentUpon>AdminMainPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AreYouSureForm.resx">
       <DependentUpon>AreYouSureForm.cs</DependentUpon>
